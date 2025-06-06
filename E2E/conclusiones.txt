@@ -2,7 +2,7 @@ CONCLUSIONES DEL EJERCICIO
 
 Descripción del ejercicio:
 ------------------------------
-Se desarrolló una automatización E2E del flujo de compra en el sitio https://www.demoblaze.com, usando Java con Selenium WebDriver, aplicando el patrón Page Object Model (POM) y centralizando datos mediante un archivo externo datos.properties.
+Se desarrolló una automatización E2E del flujo de compra en el sitio https://www.demoblaze.com, usando Java con Selenium WebDriver, aplicando el patrón Page Object Model (POM) y centralizando datos mediante un archivo externo datos.properties y se generaron reportes HTML con evidencias visuales usando ExtentReports.
 
 Arquitectura aplicada:
 ----------------------------
@@ -23,6 +23,7 @@ Los productos se comparan con la lista externa sin estar quemados en el código.
 
 Se controlaron posibles errores del sistema, usando esperas para no adelantarse a los elementos y manejando alertas emergentes para que el flujo no se rompa.
 
+Registro visual paso a paso con capturas de pantalla automáticas por cada acción clave.
 
 Retos superados:
 ----------------------
@@ -34,10 +35,14 @@ Retos superados:
 
 -Todo se construyó pensando en que más adelante se puedan agregar más productos, formularios u otros escenarios sin tener que rehacer lo que ya está.
 
+-Se diseñó una clase reutilizable que toma capturas automáticas y las enlaza directamente en los reportes HTML.
 
 Valor agregado:
 ----------------------
 - El proyecto quedó organizado de forma que es muy fácil de mantener y seguir ampliando.
+-Uso de TestNG: La ejecución se realiza bajo un entorno de pruebas, soportando múltiples suites y flujos.
+
+-Se generó un informe visual con timestamp, estatus de ejecución, y capturas de cada paso, mejorando la trazabilidad y la presentación para stakeholders.
 
 - Separar los datos de entrada en un archivo datos.properties permite mantener y escalar la automatización fácilmente.
 

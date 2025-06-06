@@ -56,9 +56,12 @@ public class CartPage {
         elementos.escribirTexto(campoMes, mes);
         elementos.escribirTexto(campoAnio, anio);
 
-        elementos.hacerClic(botonComprar);
+       
     }
 
+    public void hacerClickEnComprar() {
+    	 elementos.hacerClic(botonComprar);
+    }
     public boolean validarCompraExitosa(String textoEsperado) {
         elementos.esperarElementoVisible(mensajeConfirmacion, 10);
         return elementos.validarTextoIgual(mensajeConfirmacion, textoEsperado);
