@@ -1,0 +1,6 @@
+target/
+*.class
+.idea/
+.classpath
+.project
+*.log

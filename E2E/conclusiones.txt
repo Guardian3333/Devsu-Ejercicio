@@ -1,0 +1,44 @@
+CONCLUSIONES DEL EJERCICIO
+
+Descripción del ejercicio:
+------------------------------
+Se desarrolló una automatización E2E del flujo de compra en el sitio https://www.demoblaze.com, usando Java con Selenium WebDriver, aplicando el patrón Page Object Model (POM) y centralizando datos mediante un archivo externo datos.properties.
+
+Arquitectura aplicada:
+----------------------------
+-cada pantalla (como el home, el carrito o el producto) tiene su propia clase, lo que hace que todo sea más fácil de entender y mantener.
+
+-Se creó una clase llamada ElementosWeb con funciones que se repiten mucho: por ejemplo, hacer clic, escribir en un campo o esperar a que aparezca algo en pantalla. Así no hay que escribir lo mismo una y otra vez.
+
+-Toda la información variable (productos, datos del formulario, URL base) se coloco en el archivo datos.properties, facilitando cambios sin tocar la lógica.
+
+-Permite agregar más productos, validar distintos mensajes o cambiar partes del proceso sin afectar todo el código. Eso lo hace ideal para pruebas más grandes o para usar en otros proyectos similares.
+
+
+Lo que se logró con esta automatización:
+-----------------------------------------
+Se logró automatizar todo el proceso de compra de principio a fin, desde agregar productos al carrito hasta llenar el formulario y validar el mensaje final.
+
+Los productos se comparan con la lista externa sin estar quemados en el código.
+
+Se controlaron posibles errores del sistema, usando esperas para no adelantarse a los elementos y manejando alertas emergentes para que el flujo no se rompa.
+
+
+Retos superados:
+----------------------
+-Algunos botones o textos no estaban disponibles inmediatamente, así que se usaron esperas controladas para que la prueba no fallara.
+
+-Para llenar el formulario de compra hubo que asegurarse de que el modal estuviera visible y activo antes de escribir en los campos.
+
+-Se crearon funciones reutilizables para comprobar que uno o varios productos estuvieran correctamente agregados, sin tener que escribir validaciones manuales para cada caso.
+
+-Todo se construyó pensando en que más adelante se puedan agregar más productos, formularios u otros escenarios sin tener que rehacer lo que ya está.
+
+
+Valor agregado:
+----------------------
+- El proyecto quedó organizado de forma que es muy fácil de mantener y seguir ampliando.
+
+- Separar los datos de entrada en un archivo datos.properties permite mantener y escalar la automatización fácilmente.
+
+- Si más adelante se necesitan agregar más productos, flujos o validaciones, no hay que empezar de cero ni modificar todo. Simplemente se reutiliza lo que ya está hecho, lo que ahorra tiempo y esfuerzo.

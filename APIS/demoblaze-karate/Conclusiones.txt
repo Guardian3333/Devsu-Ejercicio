@@ -1,0 +1,19 @@
+
+CONCLUSIONES DEL EJERCICIO
+
+
+Se realizaron 4 pruebas sobre los servicios de registro y login de la página Demoblaze usando Karate DSL.
+
+Cosas que se validaron:
+- El sistema permite registrar un nuevo usuario si el nombre es único.
+- Si el usuario ya existe, responde con un mensaje claro.
+- Al hacer login con los datos correctos, se entrega un token.
+- Si la contraseña es incorrecta, responde con "Wrong password".
+
+Cómo se resolvieron los casos:
+- Se usó Karate porque permite escribir pruebas de forma muy sencilla, sin necesidad de código complicado.
+- Se escribieron los escenarios en lenguaje natural usando `.feature`.
+- Se ejecutaron todas las pruebas desde la consola con el archivo .jar.
+
+Conclusión final:
+El ejercicio permitió validar de forma completa el comportamiento básico de autenticación en la API de Demoblaze. Karate facilitó la implementación rápida y entendible de todos los casos propuestos.
